@@ -1,29 +1,50 @@
-/*  only screen chỉ với màn hình 
-    only print chỉ mới amsy in*/
+body {
+    background-color: orange;
+    display: flex;
+    height: 100vh;
+}
 
-@media only print {
-    h1 {
-        color: violet;
+
+/* Mobile: width < 740px */
+
+
+/* Table: width >= 740px and width < 1024px*/
+
+
+/* PC: width >= 1024px */
+
+.mobile,
+.tablet,
+.pc {
+    margin: auto;
+    font-size: 100px;
+    color: #fff;
+    display: none;
+}
+
+
+/* Mobile: width < 740px */
+
+@media only screen and (max-width: 739px) {
+    .mobile {
+        display: block;
     }
 }
 
 
-/* cách nhớ 2 trg hợp */
+/* Table: width >= 740px and width < 1024px */
 
-
-/* max-width ...px: thì nhỏ hơn hc bằng ...px thì code sẽ chạy */
-
-@media screen and (max-width: 1024px) {
-    h1 {
-        color: green;
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
     }
 }
 
 
-/* min-width ...px: thì lớn hơn hc bằng ...px thì code sẽ chạy */
+/*PC: width >= 1024px  */
 
-@media screen and (min-width: 1024px) {
-    h1 {
-        color: blue;
+@media only screen and (min-width: 1024px) {
+    .pc {
+        display: block;
     }
 }
