@@ -1,0 +1,29 @@
+/*  only screen chỉ với màn hình 
+    only print chỉ mới amsy in*/
+
+@media only print {
+    h1 {
+        color: violet;
+    }
+}
+
+
+/* cách nhớ 2 trg hợp */
+
+
+/* max-width ...px: thì nhỏ hơn hc bằng ...px thì code sẽ chạy */
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        color: green;
+    }
+}
+
+
+/* min-width ...px: thì lớn hơn hc bằng ...px thì code sẽ chạy */
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        color: blue;
+    }
+}
