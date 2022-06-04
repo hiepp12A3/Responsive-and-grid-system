@@ -4,149 +4,138 @@
 
 body {
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #fff;
 }
 
 .main {
     width: 1200px;
     min-height: 100vh;
     max-width: 100%;
-    margin: 10px auto 360px;
-    background-color: #fff;
+    margin: auto;
     padding-bottom: 20px;
 }
 
-
-/* Product */
-
-.main__product {
+.nav {
     display: flex;
-    padding: 10px;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
 }
 
-.main__product-img {
-    width: 40%;
-    padding-top: 40%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
+.nav__list {
+    display: flex;
+    list-style: none;
 }
 
-.main__product-info {
-    width: 60%;
-    padding: 10px;
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
 }
 
 
-/* Column layout */
+/* Article */
 
-.column-layout {
-    margin-top: 36px;
-    padding: 12px 0;
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+
+/* Mobile nav */
+
+.nav__bars-btn {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    display: none;
+    margin-left: 8px;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
     background-color: #fff;
-    display: flex;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
 }
 
-.column-layout__category {
-    width: 20%;
-    padding: 0 16px;
+.nav__mobile-list {
+    margin-top: 24px;
 }
 
-.column-layout__container {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
+.nav__mobile-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.4rem;
 }
 
-.column-item {
-    width: 25%;
-    padding: 0 16px;
+.nav__mobile-close {
+    width: 28px;
+    height: 28px;
+    font-size: 1.4rem;
+    color: #666;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
 }
 
-
-/* Feature layout */
-
-.feature-layout {
-    margin-top: 36px;
-    display: flex;
-    justify-content: space-around;
+.nav__input {
+    display: none;
 }
 
-.feature-item {
-    padding: 12px 16px;
-    margin-top: 16px;
-    flex-basis: 30%;
+.nav__input:checked~.nav__overlay {
+    display: block;
 }
 
-.feature-item:nth-child(1) {
-    background-color: rgb(192, 227, 222);
+.nav__input:checked~.nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
 }
 
-.feature-item:nth-child(2) {
-    background-color: rgb(227, 200, 192);
-}
-
-.feature-item:nth-child(3) {
-    background-color: rgb(226, 192, 227);
-}
-
-
-/* MObile & table: width < 1024px */
-
-@media only screen and (max-width: 63.9375em) {
-    .main__product {
-        flex-direction: column-reverse;
+@media (max-width: 1023px) {
+    .nav__bars-btn {
+        display: block;
     }
-    .main__product-name {
-        width: 100%;
-    }
-    .main__product-desc {
+    .nav__pc {
         display: none;
     }
 }
 
-
-/* Mobile: width < 740px */
-
-@media only screen and (max-width: 46.1875em) {
-    /* Product */
-    .main__product-img {
-        width: 95%;
-        padding-top: 85%;
+@keyframes fadeIn {
+    from {
+        opacity: 0
     }
-    /* Course */
-    .column-layout__category {
-        display: none;
-    }
-    .column-item {
-        width: 100%;
-        text-align: center;
-    }
-    .column-layout__container {
-        width: 100%;
-    }
-    /* Card layout */
-    .feature-layout {
-        flex-direction: column;
-    }
-}
-
-
-/* Tablet: width >= 740px and width < 1024px */
-
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-    /* Product */
-    .main__product-img {
-        width: 85%;
-        padding-top: 85%;
-    }
-    /* Course */
-    .column-item {
-        width: 33.333%;
-    }
-    /* Card layout */
-    .feature-item {
-        /* flex-basis: 50%; */
+    to {
+        opacity: 1;
     }
 }

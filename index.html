@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive</title>
     <link rel="stylesheet" href="./style_1.css">
+
     <!-- <link rel="stylesheet" href="./style_2.css"> -->
     <!-- tìm kiếm và copy từ respond.js polyfill cdn  -->
     <!-- nếu là IE 6 thì dòng code này được chạy -->
@@ -17,80 +18,77 @@
 
 <body>
     <div class="main">
-        <!-- Product -->
-        <div class="main__product">
-            <div class="main__product-img" style="background-image: url(https://cf.shopee.vn/file/21f1fe1e8ee8ff81696ad111ced1530f);"></div>
-
-            <div class="main__product-info">
-                <h1 class="main__product-name">
-                    Set sữa rửa mặt Ohui Prime Gel Cleanser
-                </h1>
-                <h3 class="main__product-price">1.035.000đ</h3>
-                <p class="main__product-desc">
-                    OHUI PRIME GEL CLEANSER- SỮA RỬA MẶT DẠNG GEL . Rửa mặt thôi mà cũng làm da căng bóng mướt mịn, có tin ko ạ? Tháng này Ohui cho ra 1 em sữa rửa mặt không những làm sạch da còn giúp da căng bóng sáng khoẻ, phê pha lắm nhé.
-                </p>
-            </div>
-        </div>
-
-        <!-- Column layout -->
-        <div class="column-layout">
-            <div class="column-layout__category">
-                <h2>Category</h2>
-                <ul class="column-layout__list">
-                    <li class="column-layout__item">
-                        <a href="">Javascript</a>
+        <div class="nav">
+            <!-- Nav PC -->
+            <nav class="nav__pc">
+                <ul class="nav__list">
+                    <li>
+                        <a href="" class="nav__link">Home</a>
                     </li>
-                    <li class="column-layout__item">
-                        <a href="">PHP</a>
+                    <li>
+                        <a href="" class="nav__link">About</a>
                     </li>
-                    <li class="column-layout__item">
-                        <a href="">Ruby</a>
+                    <li>
+                        <a href="" class="nav__link">Category</a>
                     </li>
-                    <li class="column-layout__item">
-                        <a href="">Dart</a>
+                    <li>
+                        <a href="" class="nav__link">News</a>
                     </li>
-                    <li class="column-layout__item">
-                        <a href="">Python</a>
+                    <li>
+                        <a href="" class="nav__link">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="column-layout__container">
-                <div class="column-item">
-                    <h2>Course 1</h2>
-                    <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed to me.Since I've been interested in your company for a long time, I would like to apply today as a Sample position in permanent employment.</p>
-                </div>
-                <div class="column-item">
-                    <h2>Course 2</h2>
-                    <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed to me.Since I've been interested in your company for a long time, I would like to apply today as a Sample position in permanent employment.</p>
-                </div>
-                <div class="column-item">
-                    <h2>Course 3</h2>
-                    <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed to me.Since I've been interested in your company for a long time, I would like to apply today as a Sample position in permanent employment.</p>
-                </div>
-                <div class="column-item">
-                    <h2>Course 4</h2>
-                    <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed to me.Since I've been interested in your company for a long time, I would like to apply today as a Sample position in permanent employment.</p>
-                </div>
-            </div>
-        </div>
+            <label for="nav-mobile-input" class="nav__bars-btn">
 
-        <!-- Feature layout -->
-        <div class="feature-layout">
-            <div class="feature-item">
-                <h2>Feature 1</h2>
-                <p>I'm writing to you in reference to the job position advertised MyCV.vn which immediately appealed to me.Since I've been interested in your company for a long time, I would like to apply today as a Sample position in permanent employment.</p>
-            </div>
-            <div class="feature-item">
-                <h2>Feature 2</h2>
-                <p>At the moment I'm working as a Sample position at Sample company.My most important tasks include familiarizing myself with new products, conducting sales talks and transferring orders.</p>
-            </div>
-            <div class="feature-item">
-                <h2>Feature 3</h2>
-                <p>Your job list sounds great! I hope that this will enable me to develop personal and professional development opportunities.I like your focus and image in this industry very well, so I see you as a very interesting employer.I have been
-                    following your development for a long time in the media and therefore believe that I also fit in well with the company.</p>
-            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+            </label>
         </div>
+        <input hidden type="checkbox" name="" class="nav__input" id="nav-mobile-input">
+
+        <label for="nav-mobile-input" class="nav__overlay"> </label>
+
+        </label>
+        <nav class="nav__mobile">
+            <label for="nav-mobile-input" class="nav__mobile-close">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+            </label>
+            <ul class="nav__mobile-list">
+                <li>
+                    <a href="" class="nav__mobile-link">Home</a>
+                </li>
+                <li>
+                    <a href="" class="nav__mobile-link">About</a>
+                </li>
+                <li>
+                    <a href="" class="nav__mobile-link">Category</a>
+                </li>
+                <li>
+                    <a href="" class="nav__mobile-link">News</a>
+                </li>
+                <li>
+                    <a href="" class="nav__mobile-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Hơn 100 học sinh biết bơi nhờ lớp dạy bơi miễn phí của những thanh niên tốt bụng</h1>
+            <p><strong>Hai năm nay, hai thanh niên ở xã Chư Đăng Ya, huyện Chư Pah (Gia Lai) cùng với một số thanh niên khác của xã đã tự nguyện dạy bơi cho những học sinh bản địa. Nhờ có lớp học bơi này, hơn 100 học sinh ở xã đã biết bơi, có thêm kỹ năng sinh tồn ở vùng đất thường có nước dữ vào mùa mưa.</strong></p>
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019
+                vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="https://www.thanhxuan.gov.vn/portal/khuongdinh/Photos/2015-09/2d3d8ef817831f3dT%E1%BA%B7ng%20qu%C3%A0%20cho%20tr%E1%BA%BB%20em%20Thu%20L%C5%A9m-%20Lai%20Ch%C3%A2u.JPG" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019
+                vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="https://tttd.ex-cdn.com/files/f2/documents/10184/5227700/IMG_5661.jpg" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019
+                vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+            <img src="http://danvan.vn/Uploads/2017/9/15/quangyen040917.jpg" alt="">
+            <p>Câu chuyện về hành động đẹp của chị Lê Thị Mai (33 tuổi, người phụ nữ bán vé số tại TP.Đồng Xoài, Bình Phước) nhặt được số tiền hơn 100 triệu đồng cùng nhiều lắc, vòng, dây chuyền bằng vàng và trả lại cho người đánh rơi vào chiều ngày 28.10.2019
+                vẫn đang được nhiều người nhắc đến như một hành động đẹp, một bông hoa việc tốt giữa đời thường.</p>
+        </article>
     </div>
 </body>
 
