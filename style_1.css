@@ -61,6 +61,7 @@ article img {
     color: #fff;
     display: none;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 .nav__overlay {
@@ -107,6 +108,7 @@ article img {
     position: absolute;
     top: 0.4rem;
     right: 1rem;
+    cursor: pointer;
 }
 
 .nav__input {
